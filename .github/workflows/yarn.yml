@@ -39,4 +39,6 @@ jobs:
           cache: "npm"
       - run: yarn
       - run: pm2 start --name dashboard npm -- start
-      - run: npx cypress run
+      - uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
